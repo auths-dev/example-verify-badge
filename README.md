@@ -4,7 +4,7 @@ This example demonstrates how to add a "Verified by Auths" badge and verificatio
 
 ## Verification Status
 
-[![Commits Verified by Auths](docs/badge.svg)](https://your-org.github.io/example-verify-badge/)
+[![Commits Verified by Auths](docs/badge.svg)](https://auths-dev.github.io/example-verify-badge/)
 
 ## Quick Start
 
