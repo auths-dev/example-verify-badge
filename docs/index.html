@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auths Verification Demo</title>
+    <script type="module" src="https://unpkg.com/@auths-dev/verify/dist/auths-verify.mjs"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #1a1a2e;
+            background: #fafafa;
+        }
+        h1 { margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .mode-section {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .mode-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .mode-section p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .widget-container {
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        .events-log {
+            margin-top: 2rem;
+            background: #1a1a2e;
+            color: #0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .events-log p { color: #0f0; }
+        a { color: #0066cc; }
+        footer { margin-top: 2rem; color: #999; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <h1>Auths Verification Demo</h1>
+    <p class="subtitle">
+        Live commit signature verification using the
+        <a href="https://github.com/auths-dev/auths">Auths</a> verify widget.
+    </p>
+
+    <div class="mode-section">
+        <h2>Badge Mode</h2>
+        <p>Compact badge — embed in headers, footers, or navbars.</p>
+        <div class="widget-container">
+            <auths-verify
+                repo="auths-dev/example-verify-badge"
+                forge="github"
+                mode="badge">
+            </auths-verify>
+        </div>
+    </div>
+
+    <div class="mode-section">
+        <h2>Detail Mode</h2>
+        <p>Expanded view with signer information and verification status.</p>
+        <div class="widget-container">
+            <auths-verify
+                repo="auths-dev/example-verify-badge"
+                forge="github"
+                mode="detail">
+            </auths-verify>
+        </div>
+    </div>
+
+    <div class="mode-section">
+        <h2>Tooltip Mode</h2>
+        <p>Badge that expands on hover to show verification details.</p>
+        <div class="widget-container">
+            <auths-verify
+                repo="auths-dev/example-verify-badge"
+                forge="github"
+                mode="tooltip">
+            </auths-verify>
+        </div>
+    </div>
+
+    <div class="events-log" id="events-log">
+        <p>Event log:</p>
+    </div>
+
+    <footer>
+        <p>
+            Source: <a href="https://github.com/auths-dev/example-verify-badge">auths-dev/example-verify-badge</a>
+            | Widget: <a href="https://www.npmjs.com/package/@auths-dev/verify">@auths-dev/verify</a>
+        </p>
+    </footer>
+
+    <script>
+        const log = document.getElementById('events-log');
+        function addLog(msg) {
+            const p = document.createElement('p');
+            p.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            log.appendChild(p);
+            log.scrollTop = log.scrollHeight;
+        }
+
+        document.querySelectorAll('auths-verify').forEach(el => {
+            el.addEventListener('auths-verified', (e) => {
+                addLog(`Verified: ${JSON.stringify(e.detail)}`);
+            });
+            el.addEventListener('auths-error', (e) => {
+                addLog(`Error: ${e.detail}`);
+            });
+        });
+    </script>
+</body>
+</html>

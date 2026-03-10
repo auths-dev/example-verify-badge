@@ -1,0 +1,5 @@
+# Auths allowed signers file
+# Format: <email> ssh-ed25519 <public-key>
+
+alice@example.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExampleKeyAliceReplaceMeWithRealKey000000000
+bob@example.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExampleKeyBobReplaceMeWithARealKey00000000000
