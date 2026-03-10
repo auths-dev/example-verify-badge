@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "state": {
+    "prefix": "E6IXlw5-lnX88r3WZCt3u1qyN_Xlq7nQjtoTmuOfMIjI",
+    "current_keys": [
+      "D1P_LPk3v4aTOxFMeLJq55lsPL5-i_BhRfIn27APru2Q"
+    ],
+    "next_commitment": [
+      "E2e8_-r-iH8Yb99iPmQoaEUwxKQJh3WpLUi3PHnFQzFE"
+    ],
+    "sequence": 0,
+    "last_event_said": "E6IXlw5-lnX88r3WZCt3u1qyN_Xlq7nQjtoTmuOfMIjI",
+    "is_abandoned": false,
+    "threshold": 1,
+    "next_threshold": 1
+  },
+  "validated_against_said": "E6IXlw5-lnX88r3WZCt3u1qyN_Xlq7nQjtoTmuOfMIjI"
+}
