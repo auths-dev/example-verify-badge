@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "rid": ".auths",
+  "issuer": "did:keri:E6IXlw5-lnX88r3WZCt3u1qyN_Xlq7nQjtoTmuOfMIjI",
+  "subject": "did:key:z6MktnihicwetvA16FtHFynaJTn9eDZw51eizUEA1yGJCR4o",
+  "device_public_key": "d4ffcb3e4defe1a4cec4531e2c9ab9e65b0f2f9fa2fc18517c89f6ec03ebbb64",
+  "identity_signature": "77b3405385619afbe9144717ff8af858e8ce6a0d2f2bea3bda0da9c951480ac19af7df2756aeb492c8d8baa1ea65005ecf3b7b300b6889c14b2ac235374df302",
+  "device_signature": "77b3405385619afbe9144717ff8af858e8ce6a0d2f2bea3bda0da9c951480ac19af7df2756aeb492c8d8baa1ea65005ecf3b7b300b6889c14b2ac235374df302",
+  "timestamp": "2026-03-10T23:50:26.247047Z",
+  "note": "Linked by auths-sdk setup"
+}
