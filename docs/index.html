@@ -122,7 +122,7 @@
                 addLog(`Verified: ${JSON.stringify(e.detail)}`);
             });
             el.addEventListener('auths-error', (e) => {
-                addLog(`Error: ${e.detail}`);
+                addLog(`Error: ${e.detail?.error ?? JSON.stringify(e.detail)}`);
             });
         });
     </script>
