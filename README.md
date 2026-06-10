@@ -25,7 +25,10 @@ The `<auths-verify>` web component performs cryptographic verification entirely 
 **Add to any HTML page:**
 
 ```html
-<script type="module" src="https://unpkg.com/@auths-dev/verify/dist/auths-verify.mjs"></script>
+<script type="module"
+        src="https://unpkg.com/@auths-dev/verify@0.4.0/dist/auths-verify.mjs"
+        integrity="sha384-C6a5GCsPgw/o9tmtnaUXZ0qJgY/q8LdNxvuP/10EwOK39ZdiAcYz6CP8lT6m1V5R"
+        crossorigin="anonymous"></script>
 
 <!-- Compact badge -->
 <auths-verify repo="your-org/your-repo" forge="github" mode="badge"></auths-verify>
